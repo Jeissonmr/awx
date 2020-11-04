@@ -9,4 +9,4 @@
       
   handlers:
     - name: shutdown_machine
-      shell: shutdown -r now
+      shell: shutdown -r 
