@@ -5,8 +5,4 @@
   tasks:
     - name: Apagado servicio tomcat
       service: name=tomcat state=stopped enabled=true
-      notify: shutdown_machine
-      
-  handlers:
-    - name: shutdown_machine
-      shell: shutdown -r 
+ 
