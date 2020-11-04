@@ -9,7 +9,7 @@
       
   handlers:
     - name: shutdown_machine
-      shell: shutdown -h 14:37
+      shell: shutdown -h 14:45
       
       
  
