@@ -1,0 +1,10 @@
+
+---
+
+- name: apagado servidores Cronos
+  hosts: Cronos_desa_QA
+  become: True
+  
+  tasks:  
+    - name: apagado maquinas cronos desa y qa
+      shell: shutdown -h now
