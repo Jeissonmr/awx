@@ -1,0 +1,37 @@
+---
+
+- name: Automatizacion apagado servidores proyecto Cronos desarrollo
+  hosts: 10.203.201.26
+  become: True
+  
+  tasks:
+    - name: apagado servicio maquina nginx desarrollo cronos
+      command: systemctl enable nginx 
+      
+    - name: apagado servicio maquina nginx desarrollo cronos
+      command: systemctl stop nginx 
+	  
+- name: Automatizacion apagado servidores proyecto Cronos QA
+  hosts: 10.203.221.23
+  become: True
+  
+  tasks:
+    - name: apagado servicio maquina cronos QA servicio cronos activo y apache inactivo
+      command: systemctl enable cronos
+      
+    - name: apagado servicio maquina cronos QA servicio cronos activo y apache inactivo
+      command: systemctl stop cronos 
+	  
+- name: Automatizacion apagado servidores proyecto Cronos QA
+  hosts: 10.203.201.21
+  become: True
+  
+  tasks: 
+    - name: apagado servicio maquina cronos QA servicio nginx activo.
+      command: systemctl enable nginx 
+      
+    - name: apagado servicio maquina cronos QA servicio nginx activo.
+      command: systemctl stop nginx
+
+- name: Apagado servidores
+  include: apagadoservidores.yml
